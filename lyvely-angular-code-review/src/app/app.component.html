@@ -1,0 +1,108 @@
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: aqua;
+  }
+
+  .background-sky {
+    width: 800px;
+    height: 800px;
+    border-radius: 1em;
+    margin: auto;
+    position: relative;
+  }
+
+  .background-sky.night {
+    background: rgb(26, 49, 118);
+    background: linear-gradient(180deg, rgba(26, 49, 118, 1) 0%, rgba(89, 163, 245, 1) 100%);
+  }
+
+  .background-sky.day {
+    background: rgb(2, 155, 223);
+    background: linear-gradient(180deg, rgba(2, 155, 223, 1) 0%, rgba(164, 229, 249, 1) 100%);
+  }
+
+  .background-sky .circle {
+    margin: auto;
+  }
+
+  .background-sky .text {
+    position: absolute;
+    bottom: 25%;
+    font-size: 30px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .background-sky .text-switch {
+    position: absolute;
+    bottom: 20%;
+    font-size: 16px;
+    color: #EEEEEE;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .background-sky .text-switch a {
+    color: #EEEEEE;
+  }
+
+  .background-sky.day .dark {
+    display: none;
+  }
+
+  .background-sky.day .bright {
+    display: block;
+  }
+
+  .background-sky.day .text-bright {
+    display: none;
+  }
+
+  .background-sky.day .text-dark {
+    display: block;
+  }
+
+  .background-sky.night .dark {
+    display: block;
+  }
+
+  .background-sky.night .bright {
+    display: none;
+  }
+
+  .background-sky.night .text-bright {
+    display: block;
+  }
+
+  .background-sky.night .text-dark {
+    display: none;
+  }
+
+  .background-sky .logo {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+  }
+</style>
+
+<div class="content" role="main">
+  <div id="background-sky" class="background-sky night d-flex align-items-center">
+    <div class="logo"><img src="assets/images/white-logo-lyvely.svg"></div>
+    <img src="assets/images/moon.png" class="circle dark">
+    <img src="assets/images/sun.png" class="circle bright">
+    <div class="text text-bright">Good day 😎!</div>
+    <div class="text text-dark">Good night 🥱!</div>
+    <div class="text-switch"><a (click)="changeColour()">Switch</a></div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
