@@ -19,9 +19,9 @@ import os
 files_to_back_up = [
   '../src/app/app.component.html',
   '../src/app/app.component.ts',
-  '../assets/images/moon.png',
-  '../assets/images/sun.png',
-  '../assets/images/white-logo-lyvely.svg',
+  '../src/assets/images/moon.png',
+  '../src/assets/images/sun.png',
+  '../src/assets/images/white-logo-lyvely.svg',
 ]
 
 step_backup = 'backup'
