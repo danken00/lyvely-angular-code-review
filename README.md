@@ -12,8 +12,8 @@ Simply, a pull request. This is a very simple Angular project, with a single com
 
 ## Instructions
 
-1. Fork this repository in GitHub
-2. Create a pull request from the `develop` branch to the `release/v1.0.0` branch. This PR should include all the files because `release/v1.0.0` is an empty branch
+1. To start, fork this repository, and **make sure you deselect the checkbox "Copy the `main` branch only"**
+2. Create a pull request from the `release/v1.0.0` branch to the `main` branch. This PR should contain a number of changed files
 3. Now you have a PR, go through and review it! Do it just like you're reviewing someone else's code
    1. Only review the `/src` directly as the rest is just standard Angular stuff
 4. Once your PR is done, share your repository with `danken00` and let us know you've finished this task
